@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import React, { useEffect } from "react";
 
 import { useSearchParams } from "next/navigation";
 
@@ -9,10 +6,6 @@ export default function NavbarItem({ title, param }) {
   const searchParams = useSearchParams();
   const genre = searchParams.get("genre");
 
-  useEffect(() => {
-    console.log(searchParams, "searchParams");
-    console.log(genre, "genre");
-  });
   return (
     <div>
       <Link
